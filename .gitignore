@@ -1,0 +1,7 @@
+node_modules
+blockchain.py
+.env
+keygenerator.js
+myblockchains.js
+main.js
+package-lock.json

@@ -1,0 +1,6 @@
+https://rinkeby.etherscan.io - track transactions
+https://infura.io/ - infura api
+https://iancoleman.io - convert account Mnemonic to normal accounts
+https://remix.ethereum.org - create sol files and deploy them online tool
+https://faucets.chain.link/rinkeby - assign token to Metamask account
+metamask extension required for the test account

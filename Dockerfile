@@ -3,6 +3,6 @@ WORKDIR /blockchain
 RUN apt-get update
 RUN apt-get install -y wget vim git zip unzip less sqlite3 bsdmainutils bc
 
-# copy the react app to the container
+# copy the node app to the container
 COPY ./package.json /blockchain
 RUN npm install

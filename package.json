@@ -9,12 +9,12 @@
   "author": "Omar Aljazairy",
   "license": "ISC",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.0.1",
+    "@truffle/hdwallet-provider": "^1.5.1",
     "crypto-js": "^4.1.1",
     "elliptic": "^6.5.4",
     "ganache-cli": "^6.12.2",
     "mocha": "^9.1.2",
-    "solc": "^0.8.9",
+    "solc": "^0.4.17",
     "web3": "^1.6.0"
   },
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "inbox",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "web3 ethereum",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.1",
+    "create-react-app": "^5.0.1",
     "crypto-js": "^4.1.1",
     "elliptic": "^6.5.4",
     "ganache-cli": "^6.12.2",

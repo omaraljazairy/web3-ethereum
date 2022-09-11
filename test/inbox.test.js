@@ -2,7 +2,7 @@ const assert = require('assert');
 const ganache = require('ganache-cli'); // ethereum test network
 const Web3 = require('web3'); // capital Web3 because we are using a constructor of Web3.
 const web3 = new Web3(ganache.provider());
-const { abi, evm } = require('../compile');
+const { abi, evm } = require('../compile_inbox');
 
 let accounts;
 let inbox;

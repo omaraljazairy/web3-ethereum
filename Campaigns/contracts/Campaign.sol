@@ -25,12 +25,11 @@ contract Campaign  {
         mapping(address => bool) approvals;
     }
 
-    mapping (uint => Request) requests;
+    Request[] public requests;
 
     address public manager;
     uint public minimumContribution;
     mapping(address => bool) public approvers;
-    uint numRequests;
     uint public approversCount;
 
     modifier restricted() {
@@ -55,8 +54,7 @@ contract Campaign  {
         address payable recipient) public restricted {
 
             // get last index of request and set it to the newRequest
-            Request storage newRequest = requests[numRequests];
-            numRequests ++; // increment the requests
+            Request storage newRequest = requests.push();
             newRequest.description = description;
             newRequest.value = value;
             newRequest.recipient = recipient;
@@ -78,5 +76,21 @@ contract Campaign  {
         require(request.approvalCount > (approversCount / 2));
         request.recipient.transfer(request.value);
         request.complete = true;
+    }
+
+    function getSummary() public view returns (
+        uint, uint, uint, uint, address
+    ) {
+        return (
+            minimumContribution,
+            address(this).balance,
+            requests.length,
+            approversCount,
+            manager
+        );
+    }
+
+    function getRequestCount() public view returns (uint) {
+        return requests.length;
     }
 }
